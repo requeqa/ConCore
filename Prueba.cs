@@ -8,19 +8,22 @@ namespace CorePrueba.Entidades
     
     class Prueba
     {
-        public Prueba(string n, string t)
+        public Prueba()
         {
-            nombre = n;
-            tipo = t;
-            process = new Process();
-            startInfo = new ProcessStartInfo();
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.FileName = "jmeter\\bin\\jmeter-n";
-            SetVariable("JMETER_HOME","D:\\apache-jmeter-5.4.1\\bin");
+            //nombre = n;
+            //tipo = t;
+            //process = new Process();
+            //startInfo = new ProcessStartInfo();
+            //startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            //startInfo.FileName = "jmeter\\bin\\jmeter-n";
+            SetVariable("JMETER_HOME","D:\\JMeter\\");//bin\\jmeter.bat
             SetVariable("JAVA_HOME","C:\\Program Files\\Java\\jdk1.8.0_102");
-            
+            //AddPath("%JMETER_HOME%\\bin;");            
         }
+
     #region Variables
+        public bool actuazliacion {get{return actualizar;}}
+        bool actualizar=false;
         string nombre;
         string tipo;
         Process process;
@@ -28,19 +31,33 @@ namespace CorePrueba.Entidades
     #endregion
         public delegate string cmdDel(params object[] args);
         Dictionary<string, cmdDel> cmd = new Dictionary<string, cmdDel>();
-        public void SetVariable(string Variable, string valor){
+        void SetVariable(string Variable, string Valor){
             try{
-                string XXX;
-                XXX = System.Environment.GetEnvironmentVariable(Variable,EnvironmentVariableTarget.User);
-                if(XXX == valor) Console.WriteLine("Variable {0} ya existe.",Variable);
+                string XXX = System.Environment.GetEnvironmentVariable(Variable,EnvironmentVariableTarget.User);
+                if(XXX == Valor) Console.WriteLine("Ya existe {0}: \"{1}\" .",Variable,Valor);
                 else{
-                    System.Environment.SetEnvironmentVariable(Variable,valor,EnvironmentVariableTarget.User);
-                    Console.WriteLine("Variable \"{0}\" Creada ",Variable);
+                    System.Environment.SetEnvironmentVariable(Variable,Valor,EnvironmentVariableTarget.User);
+                    Console.WriteLine("Variable Creada {0}: \"{1}\"",Variable,Valor);
+                    actualizar=true;
                 }
             }catch(Exception e){
-                Console.WriteLine("Error al crear varialbe {0}; {1}",Variable,e.Message);
+                Console.WriteLine("Error al crear varialbe {0}:\"{1}\"; {2}",Variable,Valor,e.Message);
             }
         }
+        void AddPath(string Valor){
+            try{
+                string XXX=System.Environment.GetEnvironmentVariable("Path",EnvironmentVariableTarget.Machine);
+                if(XXX.Contains(Valor))Console.WriteLine("Path: {0} ya existe.",Valor);
+                else{
+                    System.Environment.SetEnvironmentVariable("Path",Valor+XXX,EnvironmentVariableTarget.Machine);
+                    Console.WriteLine("Path: \"{0}\" Agregado ",Valor);
+                }
+
+            }catch(Exception e){                
+                Console.WriteLine("Error al Agregar Path {0}; {1}",Valor,e.Message);
+            }
+        }
+
         public void timbreMario()
         {
             Console.Beep(659, 125);
@@ -78,3 +95,9 @@ namespace CorePrueba.Entidades
     
 }
 //7431
+
+/*
+
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_102\bin;C:\Program Files\nodejs\;
+
+*/

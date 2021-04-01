@@ -1,0 +1,22 @@
+2021-04-01 16:18:29,428 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2021-04-01 16:18:29,446 INFO o.a.j.JMeter: Loading user properties from: D:\JMeter\bin\user.properties
+2021-04-01 16:18:29,446 INFO o.a.j.JMeter: Loading system properties from: D:\JMeter\bin\system.properties
+2021-04-01 16:18:29,454 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2021-04-01 16:18:29,454 INFO o.a.j.JMeter: Version 5.4.1
+2021-04-01 16:18:29,454 INFO o.a.j.JMeter: java.version=1.8.0_281
+2021-04-01 16:18:29,454 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2021-04-01 16:18:29,454 INFO o.a.j.JMeter: os.name=Windows 10
+2021-04-01 16:18:29,454 INFO o.a.j.JMeter: os.arch=amd64
+2021-04-01 16:18:29,454 INFO o.a.j.JMeter: os.version=10.0
+2021-04-01 16:18:29,456 INFO o.a.j.JMeter: file.encoding=Cp1252
+2021-04-01 16:18:29,456 INFO o.a.j.JMeter: java.awt.headless=null
+2021-04-01 16:18:29,456 INFO o.a.j.JMeter: Max memory     =1073741824
+2021-04-01 16:18:29,456 INFO o.a.j.JMeter: Available Processors =4
+2021-04-01 16:18:29,460 INFO o.a.j.JMeter: Default Locale=English (EN)
+2021-04-01 16:18:29,460 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2021-04-01 16:18:29,460 INFO o.a.j.JMeter: JMeterHome=D:\JMeter
+2021-04-01 16:18:29,460 INFO o.a.j.JMeter: user.dir  =C:\Users\aaguirre\source\repos\ConCore\ConCore
+2021-04-01 16:18:29,461 INFO o.a.j.JMeter: PWD       =C:\Users\aaguirre\source\repos\ConCore\ConCore
+2021-04-01 16:18:29,463 INFO o.a.j.JMeter: IP: 172.22.73.194 Name: S246-A246-0-186 FullName: S246-A246-0-186.corp.fassil.com.bo
+2021-04-01 16:18:29,551 INFO o.a.j.JMeter: Setting LAF to: laf:com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+2021-04-01 16:18:29,827 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
