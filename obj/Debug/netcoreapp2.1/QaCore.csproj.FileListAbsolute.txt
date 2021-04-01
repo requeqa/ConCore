@@ -1,0 +1,11 @@
+C:\Users\aaguirre\source\repos\ConCore\ConCore\bin\Debug\netcoreapp2.1\QaCore.deps.json
+C:\Users\aaguirre\source\repos\ConCore\ConCore\bin\Debug\netcoreapp2.1\QaCore.runtimeconfig.json
+C:\Users\aaguirre\source\repos\ConCore\ConCore\bin\Debug\netcoreapp2.1\QaCore.runtimeconfig.dev.json
+C:\Users\aaguirre\source\repos\ConCore\ConCore\bin\Debug\netcoreapp2.1\QaCore.dll
+C:\Users\aaguirre\source\repos\ConCore\ConCore\bin\Debug\netcoreapp2.1\QaCore.pdb
+C:\Users\aaguirre\source\repos\ConCore\ConCore\obj\Debug\netcoreapp2.1\QaCore.csprojAssemblyReference.cache
+C:\Users\aaguirre\source\repos\ConCore\ConCore\obj\Debug\netcoreapp2.1\QaCore.csproj.CoreCompileInputs.cache
+C:\Users\aaguirre\source\repos\ConCore\ConCore\obj\Debug\netcoreapp2.1\QaCore.AssemblyInfoInputs.cache
+C:\Users\aaguirre\source\repos\ConCore\ConCore\obj\Debug\netcoreapp2.1\QaCore.AssemblyInfo.cs
+C:\Users\aaguirre\source\repos\ConCore\ConCore\obj\Debug\netcoreapp2.1\QaCore.dll
+C:\Users\aaguirre\source\repos\ConCore\ConCore\obj\Debug\netcoreapp2.1\QaCore.pdb
