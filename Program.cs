@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-//using CorePrueba.Basico;
+using CorePrueba.Basico;
 using CorePrueba.JMeter;
 
 namespace ConCore
@@ -10,17 +10,17 @@ namespace ConCore
     {
         static void Main(string[] args)
         {            
-            var jxml = new JmtXml();
-            //var miMenu= new Menu();
-
-            jxml.Run();
-            /*
-            var JMT = new Jmeter();
             bool runner = true;
+            var JMT = new Jmeter();
+            runner=!JMT.actuazlizado;
+
+            var miMenu= new Menu();
+
             while (runner)
             {
+                
                 //Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory);
-                CmdExe("");
+                //CmdExe("");
 
 
                 JMT.Run();
@@ -28,9 +28,11 @@ namespace ConCore
                 //    miMenu.ejecutar(Console.ReadLine());
                 runner = !JMT.actuazlizado;
                 if (!runner) Console.WriteLine("Variables actualizadas, Reinicie la aplicacion");
+                // */
             }
-            // */
         }
+
+        //EJECUTAR JMETER CON PROPIEDADES
         public static void CmdExe(string File)
         { // jmeter -n -t D:\JMeter\JMX\RD-0000\Ej,jmx -l C:\Users\aaguirre\Desktop\jmt-n.XML -JHILOS=5 -J REPES=5
             string DirROOT = "D:\\JMETER\\";
