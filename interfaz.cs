@@ -8,12 +8,14 @@ namespace CorePrueba.Basico{
         {
             getMainStyle();
             crearTemas();
+                cmd.Add("info",cmd_info);
                 cmd.Add("tema",cmd_tema);
                 cmd.Add("jmt",cmd_jmt);
                 cmd.Add("exit",cmd_exit);
             //    cmd.GetValueOrDefault("na",cmd_void);            
             //cmdInfo.GetValueOrDefault<string,string>("na","Comando no Valido");
-            cmdInfo.Add("cmd","Comandos disponibles: "+string.Join(" | ",cmd.Keys));            
+            cmdInfo.Add("info","Comandos disponibles: "+string.Join(" | ",cmd.Keys));
+            cmdInfo.Add("cmd","Comandos disponibles: "+string.Join(" | ",cmd.Keys));
             cmdInfo.Add("temas","temas disponibles: "+string.Join(" | ",tema.Keys));
             cmdInfo.Add("jmt","Bienvenido a Zona JMeter");
             cmdInfo.Add("exit","Esta Seguro? si | no");            
@@ -47,6 +49,7 @@ namespace CorePrueba.Basico{
         public void ejecutar(string Linea){
             int x =0;
             try{
+
                 x=Linea.IndexOf(" ");                
                     Console.WriteLine("IndexOf: {0}",x);
                 comando = Linea.Substring(0,x);//.PadLeft(x);                
@@ -55,6 +58,7 @@ namespace CorePrueba.Basico{
                     Console.WriteLine("pam: {0}",xx);
                 parametros=xx.Split(new char[]{','});                
                     Console.WriteLine("parametros: {0}",string.Join(", ",parametros));
+            
             }catch(Exception e){
                 Console.WriteLine("no se encontro el espacio:{0}: {1}", x, e.Message);
             }            
@@ -95,7 +99,10 @@ namespace CorePrueba.Basico{
             catch(Exception e){
                 Console.WriteLine("Valor no valido, Msj: {0}",e.Message);
             }
-        }  
+        }
+        public void cmd_info(){
+
+        }
         #endregion
 
         #region Tema
