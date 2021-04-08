@@ -64,7 +64,6 @@ namespace CorePrueba.JMeter
         Dictionary<string, cmdDel> cmd = new Dictionary<string, cmdDel>();
         #endregion
         #region JMT_Update
-
         void SetVariable(string Variable, string Valor)
         {
             try
